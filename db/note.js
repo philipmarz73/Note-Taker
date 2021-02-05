@@ -18,6 +18,32 @@ class Note {
     write(note){
         return writeFileAsynch("db/db.json",JSON.stringify(note))
     }
+
+    getNotes(){
+        return this.read().then(notes => {
+            let parseNotes;
+            try {
+              parseNotes = [].concat(JSON.parse(notes))  
+            } catch (error) {
+               parseNotes = [] 
+            }
+            console.log(parseNotes);
+            return parseNotes;
+        })
+    }
+    addNote(note){
+        const {title, text} = note;
+        const newNote = {title, text, id:uuidv4()};
+        return this.getNotes()
+        .then(notes => [...notes,newNote])
+        .then(updateNotes => this.write(updateNotes))
+        .then(()=> newNote)
+    }
+    removeNote(id){
+        return this.getNotes()
+        .then(notes => notes.filter(note => note.id !== id))
+        .then(updateNotes => this.write(updateNotes))
+    }
 }
 
 module.exports = new Note();
