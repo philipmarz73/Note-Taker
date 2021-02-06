@@ -15,7 +15,7 @@ I especially want to thank Kris Renaldi, my tutor, who was instrumental in helpi
 
 ## License
 
-&copy MIT
+&copy;MIT
 
 
 
