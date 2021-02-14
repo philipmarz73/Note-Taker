@@ -10,7 +10,7 @@ The application front end was supplied for this exercise; we were to create the 
 
 ## Acknowledgement
 
-I especially want to thank Kris Renaldi, my tutor, who was instrumental in helping me get my API routes working and showing me how to deploy on Heroku.
+I especially want to thank Kris Renaldi, my tutor, who was instrumental in helping me get my API routes working and showing me how to deploy on Heroku, and Steven Mccarther, who worked with me closely on this project.
 
 
 ## License
