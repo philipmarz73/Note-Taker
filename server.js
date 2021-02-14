@@ -1,14 +1,14 @@
 var express = require("express");
 var htmlRoutes = require("./routes/htmlRoutes");
 var apiRoutes = require ("./routes/apiRoutes");
-
+// require express, and our internal and external routes
 var app = express();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
 var PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
+// Sets up the Express app to handle data parsing and listen on the port
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"))
